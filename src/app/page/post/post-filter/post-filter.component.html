@@ -1,0 +1,7 @@
+<label for="name">
+    <input type="text" placeholder="search by title" id="name" [value]="store.filters.name()" (input)="updateName($event)" />
+</label>
+
+<button (click)="store.clearFilters()">
+    clear filters
+</button>

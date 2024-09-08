@@ -1,0 +1,38 @@
+<h1>
+  Post works!
+</h1>
+
+<p>
+  fetch data from https://jsonplaceholder.typicode.com/posts
+</p>
+
+<app-post-filter />
+<hr />
+
+@if (store.isLoading()) {
+<p>loading...</p>
+} @if (store.items(); as posts) { @for (p of posts; track p) {
+
+<div
+  style="
+    padding: 20px;
+    background-color: antiquewhite;
+    border-radius: 25px;
+    margin-bottom: 5px;
+  "
+>
+  
+  <p style="margin: 0">
+    title:
+    <span style="font-weight: bold; color: maroon;">
+      {{ p.title }}
+    </span>
+  </p>
+
+  <div>
+    <span>
+      content: {{ p.body }}
+    </span>
+  </div>
+</div>
+} }
